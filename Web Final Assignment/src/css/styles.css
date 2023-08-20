@@ -1,0 +1,232 @@
+/* Reset default margin and padding for better alignment */
+body, div, img {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  height: 70vh; /* Use viewport height for the container */
+  border: 1px solid transparent; /* Transparent border to ensure proper hover area */
+}
+
+.image-container {
+  display: inline-block;
+  transition: transform 0.3s; /* Add a transition for smooth scaling */
+  max-width: 23%; /* Limit image width to 30% of viewport */
+  
+}
+
+.image-container img {
+  width: 100%; /* Ensure the image width takes up the container width */
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-container:hover {
+  transform: scale(1.2); /* Increase the size when hovering */
+}
+
+/* Apply your color scheme */
+body {
+  --red-pantone: #e63946ff;
+  --new: rgb(238, 238, 12);
+  --honeydew: #f1faeeff;
+  --non-photo-blue: rgb(15, 114, 117);
+  --cerulean: #457b9dff;
+  --berkeley-blue: #1d3557ff;
+  background: var(--honeydew);
+}
+
+
+header {
+  font-family: 'Barriecito', sans-serif;
+  text-align: center;
+  background: var(--red-pantone);
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--honeydew);
+}
+
+footer {
+  text-align: center;
+  background: var(--cerulean);
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 5px 0;
+  color: var(--honeydew);
+  font-family: 'Barriecito', sans-serif;
+  text-align: center;
+  background: var(--red-pantone);
+  padding: 20px 0;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-top: 20px; /* Add spacing from the content above */
+}
+
+.rounded-button-1 {
+  display: inline-block;
+  padding: 13px 30px;
+  border-radius: 15px; /* Adjust the border-radius to control roundness */
+  background-color: var(--red-pantone); /* Use your desired color */
+  color: var(--non-photo-blue); /* Text color */
+  text-decoration: none;
+  border: none; /* Remove the border */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Add transitions for hover effect */
+}
+
+.rounded-button-2 {
+    display: inline-block;
+    padding: 10px 40px; /* Adjust padding as needed */
+    border-radius: 15px; /* Adjust the border-radius to control roundness */
+    background-color: var(--non-photo-blue); /* Use your desired color */
+    color: var(--red-pantone); /* Text color */
+    text-decoration: none;
+    border: none; /* Remove the border */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Add transitions for hover effect */
+}
+
+.rounded-button:hover {
+  background-color: var(--red-pantone); /* Change color on hover */
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+.button-icon {
+  display: inline-block;
+  margin-right: 10px; /* Add spacing between icon and text */
+  vertical-align: middle;
+}
+
+.rounded-button-1:hover,
+.rounded-button-2:hover {
+    background-color: var(--new); /* Change color on hover */
+    transform: scale(1.1); /* Increase size on hover */
+}
+
+a {
+  margin: 5px 0;
+  color: var(--honeydew);
+  font-family: 'Barriecito', sans-serif;
+  text-align: center;
+  background: var(--red-pantone);
+  padding: 20px 0;
+}
+
+.boxes-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.info-box {
+  width: calc(30% - 20px); /* Adjust width and spacing as needed */
+  padding: 20px;
+  background-color: var(--cerulean);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s; /* Add transitions for hover effect */
+}
+
+.info-box h2 {
+  margin: 0;
+  color: var(--honeydew);
+  font-family: 'Barriecito', sans-serif;
+}
+
+.info-box:hover {
+  background-color: var(--berkeley-blue); /* Change color on hover */
+  transform: scale(1.05); /* Increase size on hover */
+}
+
+.info-box h3{
+  font-family: 'Barriecito', sans-serif;
+  text-align: center;
+  color: var(--honeydew);
+}
+
+.info-box p{
+  font-family: 'Barriecito', sans-serif;
+  text-align: left;
+  color: var(--honeydew);
+}
+
+.education-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.education-box {
+  width: calc(30% - 20px); /* Adjust width and spacing as needed */
+  padding: 20px;
+  background-color: var(--cerulean);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s; /* Add transitions for hover effect */
+}
+
+.rounded-education-box {
+  width: calc(65% - 20px); /* Adjust width and spacing as needed */
+  padding: 20px;
+  background-color: var(--berkeley-blue);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s; /* Add transitions for hover effect */
+}
+
+.education-box h2 {
+  margin: 0;
+  color: var(--honeydew);
+  font-family: 'Barriecito', sans-serif;
+}
+
+.rounded-education-box:hover,
+.education-box:hover {
+  background-color: var(--new); /* Change color on hover */
+  transform: scale(1.05); /* Increase size on hover */
+}
+
+.rounded-education-box p2{
+  margin: 0;
+  color: var(--honeydew);
+  font-family: 'Barriecito', sans-serif;
+}
+
+.rounded-education-box p{
+  margin: 0;
+  font-size: xx-large;
+  color: var(--red-pantone);
+  font-family: 'Barriecito', sans-serif;
+}
+
+/* Center align the content vertically and horizontally */
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust as needed */
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Adjust as needed */
+  margin: 10px 0;
+}
